@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>入力確認画面</h2>
+    名前：<span th:text="${user.name}">dummy</span><br><br>
+    メール：<span th:text="${user.email}"></span><br><br>
+    性別：<span th:each="gender : ${user.genderMap}">
+          <span th:text="${user.gender}">dummy</span>
+          </span><br><br>
+    好きな言語：<span th:each="language : ${user.languageMap}">
+            <span th:text="${user.language}">dummy</span>
+            </span><br><br>
+    その他：<span th:text="${user.com}">dummy</span>
+    
+</body>
+</html>
